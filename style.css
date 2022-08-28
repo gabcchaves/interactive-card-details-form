@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+/* Resettings */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Colors */
+:root {
+	--red: hsl(0, 100%, 66%);
+	--white: hsl(0, 0%, 100%);
+	--light-grayish-violet: hsl(270, 3%, 87%);
+	--dark-grayish-violet: hsl(279, 6%, 55%);
+	--very-dark-violet: hsl(278, 68%, 11%);
+}
+
+/* General settings */
+body {
+	background-image: url("images/bg-main-desktop.png");
+	background-repeat: no-repeat;
+	background-size: 35% 100%;
+	display: flex;
+	font-family: 'Space Grotesk', sans-serif;
+}
+
+body * { font-size: 1.2vw; }
+
+body section {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: center;
+}
+
+body section article {
+	width: 60%;
+	height: 30%;
+	padding: 3%;
+	margin: 3% 0;
+	box-shadow: 0 5px 40px -10px var(--very-dark-violet);
+	border-radius: 10px;
+}
+
+#card-front {
+	background-image:
+		url("images/card-logo.svg"),
+		url("images/bg-card-front.png");
+	background-repeat: no-repeat;
+	background-size: 20%, 100% 100%;
+	background-origin: content-box, border-box;
+	color: var(--white);
+	align-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+#card-front p:first-child {
+	font-size: 2vw;
+	letter-spacing: 0.3vw;
+}
+
+#card-front p:last-child {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+}
+
+#card-back {
+	background-image: url("images/bg-card-back.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	align-self: flex-end;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+#card-back > * {
+	font-size: 1.5vw;
+	padding: 10%;
+}
+
+.card-form {
+	align-items: center;
+}
+
+.card-form form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	color: var(--very-dark-violet);
+}
+
+.form-row input:not(#fexp_month):not(#fexp_year):not(#fcvc) {
+	width: 100%;
+}
+
+.card-form form :nth-child(3) {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.card-form form :nth-child(3) div:first-child {
+	width: 47%;
+}
+
+.card-form form :nth-child(3) div:last-child {
+	width: 48%;
+}
+
+.card-form form :nth-child(3) div:first-child input {
+	display: inline;
+	width: 47%;
+}
+
+.card-form form :nth-child(3) div:first-child div {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.form-row {
+	margin: 2% 0;
+	line-height: 1.5;
+}
+
+input {
+	box-sizing: border-box;
+	padding: 1.2vh 1vw;
+	border-radius: 5px;
+	border: none;
+	transition: 0.2s;
+}
+
+input:not(input[type=submit]) {
+	border: 1px solid var(--light-grayish-violet); 
+	outline: none;
+}
+
+input:not(input[type=submit]):focus {
+		background: 
+     linear-gradient(#fff,#fff) padding-box,
+     linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+	border-color: transparent;
+    display:inline-block;
+}
+
+input[type=submit] {
+	background-color: var(--very-dark-violet);
+	color: var(--white);
+	margin: 5% 0;
+}
+
+input[type=submit]:hover {
+	filter: brightness(1.2);
+	cursor: pointer;
+}
+
+::placeholder { color: var(--dark-grayish-violet); }
