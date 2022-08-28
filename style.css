@@ -160,7 +160,7 @@ input[type=submit], button {
 	border: none;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
 	filter: brightness(1.2);
 	cursor: pointer;
 }
