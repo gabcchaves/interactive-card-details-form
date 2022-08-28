@@ -137,6 +137,7 @@ input {
 	border-radius: 5px;
 	border: none;
 	transition: 0.2s;
+	font-family: 'Space Grotesk';
 }
 
 input:not(input[type=submit]) {
@@ -164,3 +165,67 @@ input[type=submit]:hover {
 }
 
 ::placeholder { color: var(--dark-grayish-violet); }
+
+/* Mobile settings */
+@media screen and (max-width: 1080px) {
+	body {
+		flex-direction: column;
+		background-position: top;
+		background-size: 100% 35%;
+	}
+
+	body section {
+		height: 50%;
+		width: 100%;
+	}
+
+	body section article {
+		position: absolute;
+		width: 70%;
+		height: 40%;
+		padding: 5%;
+	}
+
+	.card-preview {
+		position: relative;
+	}
+
+	#card-front {
+		z-index: 1;
+		left: 5%;
+		bottom: 0;
+	}
+
+	#card-front p:first-child {
+		font-size: 3vh;
+		letter-spacing: 0.6vw;
+	}
+
+	#card-front p:last-child * {
+		font-size: 1.6vh;
+	}
+
+	#card-back {
+		top: 10%;
+		right: 5%;
+	}
+
+	#card-back * { font-size: 2vh; }
+
+	.card-form form {
+		width: 90%;
+		height: 70%;
+	}
+
+	input {
+		padding: 2vh 3vw;
+	}
+
+	.card-form * {
+		font-size: 2vh;
+	}
+
+	.card-form {
+		margin-bottom: 20%;
+	}
+}
