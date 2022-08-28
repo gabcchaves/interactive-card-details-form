@@ -131,7 +131,7 @@ body section article {
 	line-height: 1.5;
 }
 
-input {
+input, button {
 	box-sizing: border-box;
 	padding: 1.2vh 1vw;
 	border-radius: 5px;
@@ -153,16 +153,28 @@ input:not(input[type=submit]):focus {
     display:inline-block;
 }
 
-input[type=submit] {
+input[type=submit], button {
 	background-color: var(--very-dark-violet);
 	color: var(--white);
 	margin: 5% 0;
+	border: none;
 }
 
 input[type=submit]:hover {
 	filter: brightness(1.2);
 	cursor: pointer;
 }
+
+#complete-msg {
+	color: var(--very-dark-violet);
+	text-align: center;
+}
+
+#complete-msg h3 { font-size: 2.5vw; }
+
+#complete-msg p { color: var(--dark-grayish-violet); }
+
+#complete-msg button { width: 100%; }
 
 ::placeholder { color: var(--dark-grayish-violet); }
 
@@ -227,5 +239,17 @@ input[type=submit]:hover {
 
 	.card-form {
 		margin-bottom: 20%;
+	}
+
+	#complete-msg img {
+		width: 30%;
+	}
+
+	#complete-msg h3 {
+		font-size: 4vh;
+	}
+
+	#complete-msg p {
+		font-size: 3vh;
 	}
 }
