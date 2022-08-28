@@ -26,20 +26,20 @@
 		<section class="card-form">
 			<form id="card-form" method="POST" novalidate
 				onsubmit="event.preventDefault(); validateForm();">
-				<div class="form-row">
+				<div class="form-row form-field">
 					<label for="fcardholder_name">CARDHOLDER NAME</label><br>
 					<input id="fcardholder_name" type="text" placeholder="e.g. Jane Appleseed">
 					<small id="fcardholder_error" class="input-error"></small>
 				</div>
 
-				<div class="form-row">
+				<div class="form-row form-field">
 					<label for="fcard_number">CARD NUMBER</label><br>
 					<input id="fcard_number" type="text" placeholder="e.g. 1234 5678 9123 0000">
 					<small id="fcardnumber_error" class="input-error"></small>
 				</div>
 
 				<div class="form-row">
-					<div>
+					<div class="form-field">
 						<label>EXP. DATE (MM/YY)</label><br>
 						<div>
 							<input id="fexp_month" type="text" placeholder="MM">
@@ -48,7 +48,7 @@
 						<small id="fexp_error" class="input-error"></small>
 					</div>
 
-					<div>
+					<div class="form-field">
 						<label for="fcvc">CVC</label><br>
 						<input id="fcvc" type="text" placeholder="e.g. 123">
 						<small id="fcvc_error" class="input-error"></small>
