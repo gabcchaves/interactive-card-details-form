@@ -178,6 +178,11 @@ input[type=submit]:hover {
 
 ::placeholder { color: var(--dark-grayish-violet); }
 
+.input-error {
+	color: var(--red);
+	font-size: 1vw;
+}
+
 /* Mobile settings */
 @media screen and (max-width: 1080px) {
 	body {
